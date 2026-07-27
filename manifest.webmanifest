@@ -1,0 +1,17 @@
+{
+  "name": "Yapiri Project",
+  "short_name": "Yapiri",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffdf8",
+  "theme_color": "#17352e",
+  "icons": [
+    {
+      "src": "assets/img/logo-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "id": "/",
+  "scope": "/"
+}
