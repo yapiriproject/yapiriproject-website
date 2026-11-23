@@ -9,6 +9,7 @@ A responsive static multi-page prototype for **yapiriproject.com**.
 - Phrasebook
 - Learn
 - Tools
+- Encyclopedia of Tripura (EOT; entries are read from `assets/data/eot-data.js`)
 - About / roadmap
 
 ## Run locally

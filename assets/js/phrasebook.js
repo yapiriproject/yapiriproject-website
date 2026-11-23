@@ -31,15 +31,15 @@
     const entries = [{ id: 'all', name: 'All phrases', blurb: 'Every category' }, ...categories];
     entries.forEach((c, i) => {
       const n = c.id === 'all' ? phrases.length : countFor(c.id);
-      const btn = make('button', 'phrase-cat' + (c.id === active ? ' active' : ''));
+      const btn = make('button', 'cat-tile' + (c.id === active ? ' active' : ''));
       btn.type = 'button';
       btn.setAttribute('aria-pressed', String(c.id === active));
-      btn.appendChild(make('span', 'phrase-cat-no', c.id === 'all' ? '★' : String(i).padStart(2, '0')));
-      const body = make('span', 'phrase-cat-body');
+      btn.appendChild(make('span', 'cat-tile-no', c.id === 'all' ? '★' : String(i).padStart(2, '0')));
+      const body = make('span', 'cat-tile-body');
       body.appendChild(make('strong', '', c.name));
       body.appendChild(make('small', '', c.blurb || ''));
       btn.appendChild(body);
-      btn.appendChild(make('span', 'phrase-cat-count', n ? String(n) : 'Soon'));
+      btn.appendChild(make('span', 'cat-tile-count', n ? String(n) : 'Soon'));
       btn.addEventListener('click', () => { active = c.id; renderCategories(); renderList(); });
       catBox.appendChild(btn);
     });
@@ -68,7 +68,7 @@
       }
       card.appendChild(romanLine);
       if (p.yapiri) card.appendChild(make('div', 'sentence-script', p.yapiri));
-      if (p.note) card.appendChild(make('div', 'phrase-note', p.note));
+      if (p.note) card.appendChild(make('div', 'card-note', p.note));
       listBox.appendChild(card);
     });
 
