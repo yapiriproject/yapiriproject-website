@@ -365,23 +365,4 @@
   };
   window.addEventListener('hashchange', openFromHash);
   openFromHash();
-
-  const corpusSearch = document.querySelector('[data-corpus-search]');
-  const corpusDomain = document.querySelector('[data-corpus-domain]');
-  const sentences = [...document.querySelectorAll('[data-sentence]')];
-
-  const filterSentences = () => {
-    if (!sentences.length) return;
-    const query = (corpusSearch?.value || '').toLowerCase().trim();
-    const domain = corpusDomain?.value || 'all';
-    sentences.forEach((sentence) => {
-      const text = (sentence.getAttribute('data-search') || sentence.textContent).toLowerCase();
-      const sentenceDomain = sentence.getAttribute('data-domain') || '';
-      sentence.hidden = !((!query || text.includes(query)) && (domain === 'all' || sentenceDomain === domain));
-    });
-  };
-
-  [corpusSearch, corpusDomain].forEach((control) => {
-    if (control) control.addEventListener(control.tagName === 'INPUT' ? 'input' : 'change', filterSentences);
-  });
 })();

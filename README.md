@@ -2,11 +2,11 @@
 
 A responsive static multi-page prototype for **yapiriproject.com**.
 
-## Pages
+## Pages (the Phrasebook page reads its phrases from `assets/data/phrasebook-data.js`)
 - Home
 - Dictionary
 - Grammar
-- Sentence corpus
+- Phrasebook
 - Learn
 - Tools
 - About / roadmap
@@ -24,7 +24,7 @@ Then open `http://localhost:8000`.
 The interface uses the official Yapiri PUA codepoints supplied for the project. To render the glyphs, add the Yapiri font to your deployed website and define it as `font-family: Yapiri`. The prototype deliberately does not bundle or distribute a font file.
 
 ## Production next steps
-1. Connect dictionary, grammar, and corpus pages to a real database/CMS.
+1. Connect dictionary, grammar, and Phrasebook pages to a real database/CMS.
 2. Add contributor, reviewer, source, dialect, and version-status fields.
 3. Replace sample content with verified Kokborok data.
 4. Implement the complete Roman-to-Yapiri orthography engine.

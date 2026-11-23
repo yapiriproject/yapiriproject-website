@@ -1,0 +1,20 @@
+Replace only the existing favicon line in each HTML page:
+
+OLD
+<link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
+
+NEW
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+
+Also ensure this manifest link exists:
+<link rel="manifest" href="/manifest.webmanifest">
+
+Do not replace or delete:
+assets/css/
+assets/js/
+assets/fonts/
+assets/img/logo-mark.svg
